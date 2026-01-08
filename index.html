@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کد رفرال ویپاد - دریافت ۷۵,۰۰۰ تومان هدیه نقدی + ۵۰۰ سکه | معرفی نئوبانک پاسارگاد</title>
+    <style>
+        :root {
+            --primary: #2a5bd7;
+            --primary-dark: #1e4ab9;
+            --secondary: #00c9a7;
+            --dark: #1a2332;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fb;
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .vipad-container {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #4a7dff 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -150px;
+            right: -100px;
+        }
+        
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -50px;
+        }
+        
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlight {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .content-section {
+            padding: 40px;
+        }
+        
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eaeaea;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 100px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            background: #f8fafe;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--secondary);
+        }
+        
+        .referral-container {
+            background: linear-gradient(135deg, #f8fafe 0%, #eef2ff 100%);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            border: 1px solid #e1e6ff;
+        }
+        
+        .referral-label {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .referral-code-box {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(42, 91, 215, 0.1);
+            border: 1px dashed var(--primary);
+        }
+        
+        .code-display {
+            font-family: 'Courier New', monospace;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 3px;
+            margin: 15px 0;
+            direction: ltr;
+        }
+        
+        .copy-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .copy-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(42, 91, 215, 0.3);
+        }
+        
+        .copy-button.copied {
+            background: var(--secondary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        
+        .benefits-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .benefits-table th {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+        
+        .benefits-table tr:nth-child(even) {
+            background: #f8fafe;
+        }
+        
+        .benefits-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .checkmark {
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark) 0%, #2d3748 100%);
+            color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 18px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 220px;
+        }
+        
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--dark);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: #00d6b2;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 201, 167, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 201, 167, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .reward-section {
+            background: #fff9e6;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+            border-right: 4px solid #ffc107;
+        }
+        
+        .reward-title {
+            color: #e6a700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .reward-list {
+            list-style: none;
+            padding-right: 20px;
+        }
+        
+        .reward-list li {
+            margin-bottom: 15px;
+            padding-right: 10px;
+            position: relative;
+        }
+        
+        .reward-list li::before {
+            content: "✓";
+            color: #ffc107;
+            font-weight: bold;
+            position: absolute;
+            right: -20px;
+        }
+        
+        .footer-note {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            border-top: 1px solid #eaeaea;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section, .hero-section {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .code-display {
+                font-size: 1.8rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .benefits-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="vipad-container">
+        <div class="hero-section">
+            <h1>کد رفرال ویپاد | دریافت ۷۵,۰۰۰ تومان هدیه نقدی + ۵۰۰ سکه وی‌کلاب رایگان</h1>
+            <p class="hero-subtitle">عضویت در ویپاد؛ شروعی هوشمندانه برای مدیریت مالی دیجیتال با بیش از ۱۵ مزیت ویژه بانکی</p>
+            <div class="highlight">🎁 کد دعوت اختصاصی شما: CR5J3O</div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">دعوت به ویپاد: نئوبانک پیشروی بانک پاسارگاد</h2>
+            
+            <div class="intro-text">
+                <p>دوست عزیز، شما به <strong>ویپاد</strong> - نئوبانک رسمی بانک پاسارگاد دعوت شده‌اید! با استفاده از کد دعوت زیر، در مراحل افتتاح حساب ویپاد، <strong>هدیه نقدی ۷۵,۰۰۰ تومانی</strong> به همراه <strong>۵۰۰ سکه وی‌کلاب</strong> رایگان دریافت کنید.</p>
+                <p>ویپاد با ارائه خدمات بانکی دیجیتال نوین، تجربه‌ای ساده، سریع و امن از مدیریت مالی شخصی را برای شما فراهم می‌کند.</p>
+            </div>
+            
+            <div class="referral-container">
+                <div class="referral-label">
+                    <span>🎯 کد دعوت اختصاصی ویپاد</span>
+                </div>
+                <p>این کد را در مرحله ثبت‌نام وارد کنید تا هدیه شما فعال شود:</p>
+                
+                <div class="referral-code-box">
+                    <div class="code-display" id="referralCode">CR5J3O</div>
+                    <button class="copy-button" id="copyButton">
+                        <span>📋 کپی کردن کد</span>
+                    </button>
+                    <p id="copyMessage" style="margin-top: 10px; color: var(--secondary); font-weight: 600; display: none;">کد با موفقیت کپی شد!</p>
+                </div>
+                
+                <p>📥 برای دانلود اپلیکیشن ویپاد یا استفاده از نسخه تحت وب، همین حالا اقدام کنید:</p>
+                <div class="cta-buttons" style="margin-top: 20px;">
+                    <a href="https://tilin.ir/DownLoad" target="_blank" class="btn btn-primary">دانلود اپلیکیشن ویپاد</a>
+                </div>
+            </div>
+            
+            <h2 class="section-title">✅ چرا باید همین امروز عضو ویپاد شوید؟</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏦</div>
+                    <h3 class="feature-title">افتتاح حساب آنلاین</h3>
+                    <p>افتتاح حساب رایگان و بدون نیاز به مراجعه حضوری در کمتر از ۵ دقیقه با تأیید هویت ساده و سریع.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3 class="feature-title">کارت بانکی رایگان</h3>
+                    <p>دریافت کارت بانکی فیزیکی و مجازی رایگان با طراحی شخصی‌سازی شده و تحویل در محل دلخواه شما.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">وام بدون ضامن</h3>
+                    <p>دریافت انواع وام تا سقف ۴۰۰ میلیون تومان بدون نیاز به ضامن و با بررسی سریع اعتبار.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">بیمه شخص ثالث اقساطی</h3>
+                    <p>خرید بیمه شخص ثالث به صورت اقساطی با امکان صدور آنی بیمه‌نامه و پرداخت ماهانه.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3 class="feature-title">انتقال وجه غیرحضوری</h3>
+                    <p>انتقال وجه تا سقف ۲ میلیارد تومان به صورت غیرحضوری و آنی بین تمامی بانک‌ها.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">سرمایه‌گذاری آسان</h3>
+                    <p>سرمایه‌گذاری در صندوق درآمد ثابت با سود ماهانه و امکان مدیریت پورتفوی سرمایه‌گذاری.</p>
+                </div>
+            </div>
+            
+            <table class="benefits-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">مزایای کامل حساب ویپاد</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="checkmark">✓</span> پشتیبانی آنلاین ۲۴ ساعته در ۷ روز هفته</td>
+                        <td><span class="checkmark">✓</span> امکان مسدودسازی و رهگیری کارت بانکی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="checkmark">✓</span> مدیریت کامل حساب و گردش مالی</td>
+                        <td><span class="checkmark">✓</span> افزایش موجودی از طریق درگاه‌های متنوع</td>
+                    </tr>
+                    <tr>
+                        <td><span class="checkmark">✓</span> اعلان‌های لحظه‌ای تراکنش‌ها</td>
+                        <td><span class="checkmark">✓</span> دسته‌بندی هوشمند هزینه‌ها و درآمدها</td>
+                    </tr>
+                    <tr>
+                        <td><span class="checkmark">✓</span> امکان پرداخت قبوض و خرید شارژ</td>
+                        <td><span class="checkmark">✓</span> امنیت بالا با احراز هویت دو مرحله‌ای</td>
+                    </tr>
+                    <tr>
+                        <td><span class="checkmark">✓</span> خدمات بین‌المللی و مبادله ارز</td>
+                        <td><span class="checkmark">✓</span> امکان تعیین محدودیت برای تراکنش‌ها</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="reward-section">
+                <h3 class="reward-title">💵 برنامه معرفی دوستان ویپاد - درآمدزایی آسان</h3>
+                <p>با معرفی ویپاد به دوستان و آشنایان خود، علاوه بر کمک به مدیریت مالی آن‌ها، برای خود نیز درآمد کسب کنید:</p>
+                <ul class="reward-list">
+                    <li>✅ <strong>۷۵,۰۰۰ تومان هدیه نقدی</strong> به ازای هر نفر که با کد شما ثبت‌نام کند</li>
+                    <li>✅ <strong>۵۰۰ سکه وی‌کلاب رایگان</strong> برای استفاده در جشنواره‌ها و طرح‌های تشویقی</li>
+                    <li>✅ امکان پیگیری وضعیت معرفی‌ها در پنل کاربری</li>
+                    <li>✅ واریز سریع پاداش به حساب ویپاد شما</li>
+                    <li>✅ بدون محدودیت در تعداد معرفی‌ها</li>
+                </ul>
+                <p style="margin-top: 20px; font-weight: 600;">کافی است کد دعوت خود (CR5J3O) را در اختیار دوستان قرار دهید و پس از ثبت‌نام و تأیید هویت آن‌ها، پاداش خود را دریافت کنید.</p>
+            </div>
+            
+            <div class="cta-section">
+                <h2 class="cta-title">همین حالا عضو ویپاد شوید و هدیه خود را دریافت کنید!</h2>
+                <p>ویپاد با پشتوانه بانک پاسارگاد، امنیت مالی شما را تضمین می‌کند. بیش از ۵۰۰,۰۰۰ کاربر تاکنون به ویپاد پیوسته‌اند.</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://tilin.ir/DownLoad" target="_blank" class="btn btn-primary">عضویت رایگان با کد CR5J3O</a>
+                    <a href="https://vipad.ir" target="_blank" class="btn btn-secondary">مشاهده وبسایت رسمی ویپاد</a>
+                </div>
+                
+                <p style="margin-top: 25px; opacity: 0.9;">📲 پس از نصب اپلیکیشن، در مرحله ثبت‌نام کد دعوت <strong>CR5J3O</strong> را وارد کنید.</p>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p>ویپاد نئوبانک رسمی بانک پاسارگاد | کلیه خدمات تحت نظارت بانک مرکزی جمهوری اسلامی ایران</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">این صفحه صرفاً جهت معرفی خدمات ویپاد و کد دعوت ایجاد شده است. برای اطلاعات دقیق‌تر به وبسایت رسمی ویپاد مراجعه کنید.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButton = document.getElementById('copyButton');
+            const referralCode = document.getElementById('referralCode');
+            const copyMessage = document.getElementById('copyMessage');
+            
+            copyButton.addEventListener('click', function() {
+                const textToCopy = referralCode.textContent;
+                
+                // روش مدرن با استفاده از Clipboard API
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(textToCopy).then(function() {
+                        showCopySuccess();
+                    }).catch(function() {
+                        fallbackCopyText(textToCopy);
+                    });
+                } else {
+                    fallbackCopyText(textToCopy);
+                }
+            });
+            
+            function fallbackCopyText(text) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                try {
+                    document.execCommand('copy');
+                    showCopySuccess();
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                    alert('متأسفانه کپی کردن با مشکل مواجه شد. لطفاً دستی کپی کنید: ' + text);
+                }
+                
+                document.body.removeChild(textArea);
+            }
+            
+            function showCopySuccess() {
+                copyButton.classList.add('copied');
+                copyButton.innerHTML = '<span>✅ کد کپی شد</span>';
+                copyMessage.style.display = 'block';
+                
+                setTimeout(function() {
+                    copyButton.classList.remove('copied');
+                    copyButton.innerHTML = '<span>📋 کپی کردن کد</span>';
+                    copyMessage.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
